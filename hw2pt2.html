@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Homework Number Two Part Two</title>
+        <meta charset="utf-8">
+        <meta name="description" content= "My Homework Website">
+    </head>
+    <h1>
+    Homework Two Part Two
+    </h1>
+     <form name="myform">
+   First Number: <input type="text" id="num1" size="10"><br><br>
+   Second Number: <input type="text" id="num2" size="10"><br><br>
+   Third Number: <input type="text" id="num3" size="10"><br><br>
+   Results: <p id="result"></p>
+   <input type="button" onclick="process()" value="Average" event.preventDefault()>
+   <input type="button" onclick="sum()" value="Sum">
+   <input type="button" onclick="product()"value="Product">
+   <input type="button" onclick="Min()"value="Smallest">
+   <input type="button" onclick="Max()"value="Biggest">
+   <input type="reset" value="RESET">
+ </form>
+    <script>
+    function process() {
+  let x, y, z, result;
+  x = +document.getElementById("num1").value; // shortcut to turn string into number
+  y = +document.getElementById("num2").value;
+  z = +document.getElementById("num3").value;
+  result = (x + y + z) / 3;
+  document.getElementById("result").innerText = "The average is " + result.toFixed(3);
+}
+
+function sum() {
+  let x, y, z, result;
+  x = +document.getElementById("num1").value; // shortcut to turn string into number
+  y = +document.getElementById("num2").value;
+  z = +document.getElementById("num3").value;
+  result = (x + y + z);
+  document.getElementById("result").innerText = "The sum is " + result.toFixed(4);
+  }
+  function product() {
+  let x, y, z, result;
+  x = +document.getElementById("num1").value; // shortcut to turn string into number
+  y = +document.getElementById("num2").value;
+  z = +document.getElementById("num3").value;
+  result = (x*y*z)
+  document.getElementById("result").innerText = "The product is " + result.toFixed(5); 
+  }
+function Min(){
+let x, y, z, result;
+ x = +document.getElementById("num1").value; // shortcut to turn string into number
+  y = +document.getElementById("num2").value;
+  z = +document.getElementById("num3").value;
+   if(x<y) {
+           
+            if(z<x) {
+                result = z;
+            } else {
+                result = x;}
+           }else { if(y<z) 
+                result = y;
+             else 
+                result = z;}
+   document.getElementById("result").innerText = "The Min is " + result.toFixed(6);  
+   }
+   function Max(){
+let x, y, z, result;
+ x = +document.getElementById("num1").value; // shortcut to turn string into number
+  y = +document.getElementById("num2").value;
+  z = +document.getElementById("num3").value;
+   if(x>y){ 
+           
+            if(z>x) {
+                result = z;
+            } else {
+                result = x;}
+           }else { if(y>z) 
+                result = y;
+             else 
+                result = z;}
+   document.getElementById("result").innerText = "The Max is " + result.toFixed(5);  
+   }</script>
+   <li><a href="HW2.html">Homework 2</a></li>
+   </html>
