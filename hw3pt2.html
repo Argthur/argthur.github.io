@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Percentage Calculator Using Js</title>
+    *{
+    margin: 0;
+    padding: -10;
+    box-sizing: border-box;
+}
+body{
+    text-align: left;
+    font-family: sans-serif;
+    background-color: rgb(36, 30, 126);
+}
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: white;
+        outline: none;
+    width: 350px;
+    background-color: #000;
+    
+    font-weight: 850;
+    text-align: center;
+    
+    font-size: 35px;
+    height: 45px;
+}
+.card{
+    height: 25vh;
+    width: 70vw;
+    border-radius: 25px;
+    margin: auto;
+   
+    background-color: #091921;
+}
+input{
+    color: white;
+    font-weight: 800;
+
+    border: none;
+    background-color: #000;
+    font-size: 30px;
+    height: 45px;
+    text-align: center;
+    width: 450px;
+    outline: none;
+}
+button{
+    outline: none;
+    width: 350px;
+    background-color: #000;
+    color: #fff;
+    font-weight: 850;
+  
+    
+    font-size: 35px;
+    height: 45px;
+}
+.result{
+    font-size: 25px;
+    color: white;
+    font-weight: 850;
+    margin: auto;
+    height: 175px;
+    margin-top: 300px;
+    width: 450px;
+    border-radius: 15px;
+    background-color: #091921;
+}
+
+
+</style>
+</head>
+<h1>
+Homework 3 Part 2
+</h1>
+<body>
+<table style="width:100%" >
+  <tr>
+    <th style="color: white"> Item #</th>
+    <th style="color: white">Price</th>
+    <th></th>
+    <th> </th>
+    
+  </tr>
+  <tr>
+    <td style="color: white">Item 1</td>
+    <td style="color: white">20.99</td>
+   
+  </tr>
+  <tr>
+    <td style="color: white">Item 2</td>
+    <td style="color: white">12.75</td>
+  </tr>
+  <tr>
+    <td style="color: white">Item 3</td>
+    <td style="color: white">9.95</td>
+
+  </tr>
+  <tr>
+    <td style="color: white">Item 4</td>
+    <td style="color: white">33.89</td>
+  </tr>
+</table>
+    <div class="card">
+        <h1 style="text-align: center;font-size: 30px;color: white;font-family: sans-serif;">Input items sold for each number</h1>
+        
+        <input type="text" id="math" placeholder="Item One"><br><br>
+        <input type="text" id="physics" placeholder="Item Two"><br><br>
+        <input type="text" id="computer" placeholder="Item Three"><br><br>
+        <input type="text" id="programming" placeholder="Item Four"><br><br>
+        
+        <button onclick="publishResult()">View Result</button>
+        
+    </div>
+    <div class="result">
+        <span id="sum"></span><br><br>
+        <span id="percentage"></span><br><br>
+        <span id="grade"></span><br><br>
+         <a href="https://argthur.github.io/hw3.html" class="button">Back</a>
+    </div>
+</body>
+<script> 
+function publishResult(){
+    const math=document.getElementById("math").value;
+    const physics=document.getElementById("physics").value;
+    const computer=document.getElementById("computer").value;
+    const programming=document.getElementById("programming").value;
+
+    let total= ( parseFloat(math*20.99) + parseFloat(physics*12.75) + parseFloat(computer*9.95) + parseFloat(programming*33.89) *.09 +250).toFixed(2) ;
+    document.getElementById("sum").innerHTML="Total Earnings: $" + total;
+    
+    let percentage= parseFloat(math) + parseFloat(physics) + parseFloat(computer) + parseFloat(programming);
+    document.getElementById("percentage").innerHTML="The total units sold is :" + percentage;
+   
+
+}</script>
+</html> 
