@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <style>
+        <title>Homework Number Two Part Two</title>
+        <meta charset="utf-8">
+        <meta name="description" content= "My Homework Website">
+  *{
+    margin: 0;
+    padding: -10;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    font-family: sans-serif;
+    background-color: black;
+    color:white;
+}
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: white;
+        outline: none;
+    width: 350px;
+    background-color: #000;
+    
+    font-weight: 850;
+    text-align: center;
+    
+    font-size: 35px;
+    height: 45px;
+}
+  </style>
+    </head>
+    
+    <h1>
+    Homework Three Part Three
+    </h1>
+     <form name="myform">
+   Celsius: <input type="text" id="num1" size="10"><br><br>
+    Fahrenheit: <input type="text" id="num2" size="10"><br><br>
+   Results: <p id="result"></p>
+   <input type="button" onclick="process()" value="Fahrenheit" >
+   <input type="button" onclick="sum()" value="Celsius">
+   <input type="reset" value="RESET">
+ </form>
+    <script>
+    function process() {
+  let x,  result;
+  x = +document.getElementById("num1").value; // shortcut to turn string into number
+ 
+  result =  (9/5 * x) + 32 ;
+  document.getElementById("result").innerText = "The tempurature in fahrenheit is " + result.toFixed(2);
+}
+
+function sum() {
+  let x,  result;
+  x = +document.getElementById("num2").value; // shortcut to turn string into number
+ 
+  result =  5/9 * (x - 32) ;
+  document.getElementById("result").innerText = "The tempurature in celsuis is " + result.toFixed(2);
+  }
+ 
+   </script>
+   <a href="https://argthur.github.io/hw3.html" class="button">Back</a>
+   </html>
