@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <style>
+        <title>Homework Number Two Part Two</title>
+        <meta charset="utf-8">
+        <meta name="description" content= "My Homework Website">
+  *{
+    margin: 0;
+    padding: -10;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    font-family: sans-serif;
+    background-color: black;
+    color:white;
+}
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: white;
+        outline: none;
+    width: 350px;
+    background-color: #000;
+    
+    font-weight: 850;
+    text-align: center;
+    
+    font-size: 35px;
+    height: 45px;
+}
+  </style>
+    </head>
+    
+    <h1>
+    Homework Five Part Two
+    </h1>
+    
+    <h3>
+On change
+</h3>
+     <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+   
+  <select name="destinationList" onchange="goToNewPage(this.form);">
+ <option value="Choose Website">Choose Website</option>
+ <option value="https://www.youtube.com/">Youtube</option>
+  <option value="https://www.nytimes.com/games/wordle/index.html">wordle</option>
+  <option value="https://semantle.novalis.org/">Semantle</option>
+  <option value="https://jackli.gg/chessle/">Chessle</option>
+</select><br><br>
+
+ </form>
+ <form>
+ <h3>
+On button click changer
+</h3>
+  <select name="destinationList" ;>
+ <option value="Choose Website">Choose Website</option>
+ <option value="https://www.youtube.com/">Youtube</option>
+  <option value="https://www.nytimes.com/games/wordle/index.html">wordle</option>
+  <option value="https://semantle.novalis.org/">Semantle</option>
+  <option value="https://jackli.gg/chessle/">Chessle</option>
+</select><br><br>
+   <input type="button" onclick="goToNewPage(myForm)" value="Go"; >
+ </form>
+    <script>
+    function goToNewPage(myForm){
+    var myDestination=
+    myForm.destinationList.options[myForm.destinationList.selectedIndex].value
+    window.location = myDestination;
+    }
+   
+
+  
+
+ 
+   </script>
+   <a href="https://argthur.github.io/hw5.html" class="button">Back</a>
+   </html>
