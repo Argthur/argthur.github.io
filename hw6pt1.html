@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Percentage Calculator Using Js</title>
+    *{
+    margin: 0;
+    padding: -10;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    font-family: sans-serif;
+    background-color: rgb(36, 30, 126);
+}
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+margin-top: 115px;
+    text-decoration: none;
+    color: white;
+        outline: none;
+    width: 350px;
+    background-color: #000;
+    
+    font-weight: 850;
+  
+    
+    font-size: 35px;
+    height: 45px;
+}
+.card{
+    height: 15vh;
+    width: 35vw;
+    border-radius: 25px;
+    margin: auto;
+   
+    background-color: #091921;
+}
+input{
+    color: white;
+    font-weight: 800;
+
+    border: none;
+    background-color: #000;
+    font-size: 30px;
+    height: 45px;
+    text-align: center;
+    width: 450px;
+    outline: none;
+    margin: auto;
+    
+    margin-top: 50px;
+  
+}
+button{
+    outline: none;
+    width: 350px;
+    background-color: #000;
+    color: #fff;
+    font-weight: 850;
+  
+    
+    font-size: 35px;
+    height: 45px;
+}
+.result{
+    font-size: 25px;
+    color: white;
+    font-weight: 850;
+    margin: auto;
+    height: 400px;
+    margin-top: 115px;
+    width: 450px;
+    border-radius: 15px;
+    background-color: #091921;
+}
+
+
+</style>
+</head>
+<body>
+    <div class="card">
+        <h1 style="text-align: center;font-size: 30px;color: white;font-family: sans-serif;">Math functions</h1>
+        <input type="text" id="math" placeholder="Input number"><br><br>
+        
+        
+        <button onclick="publishResult()">View Result</button>
+       
+    </div>
+    <div class="result">
+        <span id="sqrt"></span><br><br>
+        <span id="percentage"></span><br><br>
+        <span id="one"></span><br><br>
+        <span id="two"></span><br><br>
+        <span id="three"></span><br><br>
+         <a href="https://argthur.github.io/hw6.html" class="button">Back</a>
+    </div>
+</body>
+<script> function publishResult(){
+    const math=document.getElementById("math").value;
+    let Integer= parseFloat(Math.round(math)) ;
+    let percentage=(Integer);
+    document.getElementById("percentage").innerHTML="The nearest integer is:" + percentage;
+		let sqr= parseFloat(Math.sqrt(math).toFixed(0))
+   let sqrt=(sqr);
+   document.getElementById("sqrt").innerHTML="The square root is:" + sqr;
+   let one= parseFloat(Math.floor(math)/10)
+  let ones=(one);
+  document.getElementById("one").innerHTML="The number rounded to the 10's:" + one;
+   let two= parseFloat(Math.floor(math)/100)
+   let twos=two;
+   document.getElementById("two").innerHTML="The number rounded to the 100's:" + two;
+   let three= parseFloat(Math.floor(math)/1000)
+    let threes=(three);
+    document.getElementById("three").innerHTML="The number rounded to the 1000's:" + three;
+}</script>
+</html> 
