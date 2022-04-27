@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<style>
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+margin-top: 115px;
+    text-decoration: none;
+    color: black
+    ;
+        outline: none;
+    width: 350px;
+    background-color: white;
+    
+    font-weight: 850;
+  
+    
+    font-size: 35px;
+    height: 45px;
+}
+body {
+    
+}
+#txt{
+    border :2px solid black;
+    padding:11px;
+}</style>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        <textarea placeholder="Enter text plz" id="one"></textarea><br />
+        <input type="text" placeholder="Enter text to be searched" id="two">
+        <br />
+        <button onclick="start()" id="but">Submit</button>
+        <br />
+        <br />
+        <p id = "txt"></p>
+    </body>
+     <a href="https://argthur.github.io/hw6.html" class="button">Back</a>
+    <script>
+    /* In bult function are used
+
+trim() - it remove the space 
+charAt() - it takes the single character 
+toUpperCase() - it will made whole str in capital letter
+
+*/
+
+
+function start() //function for click
+{
+
+    var val = 0;
+    // we will make it one if word find in future else we will leave it
+    
+    var inp = document.getElementById("one").value;
+    var search = document.getElementById("two").value;
+    // get the values of both
+    
+    inp = inp.trim();// It removes the spaces of last and first but not in middle
+    
+    inp = inp + " ";// Adding space for find all the spaces
+    
+    var word = "";// making a varible for store and empty the word 
+    
+    for(var i=0;i < inp.length;i++)
+    // Making a for loop to check the index of all word and letter
+    {
+       if (inp.charAt(i) == " ")
+       //finding space for take the words
+       {
+       
+       if (word.toUpperCase() == search.toUpperCase())
+       // we used uppercase because Js is case sensitive means A and a are two different words if make both letter to UpperCase so if someone enter abc and searched Abc then both Abc will covert in ABC means now equals.
+       {
+       val = 1;
+       break ;
+       // if we get the word before then we will not going again
+       }
+       else{
+       // if the word not contain then word will again empty
+           word = "";
+           // if we get the word the word will again be empty after checking
+       }
+       }
+      else  
+      {
+          word = word + inp.charAt(i);
+          //it will add characters to make a word 
+      }
+        
+    }
+    if(val == 1)
+    {
+       document.getElementById("txt").innerHTML = "Word Found";
+    }
+    else
+    {
+        document.getElementById("txt").innerHTML = "Word not found";
+    }
+    
+}</script>
+</html>
